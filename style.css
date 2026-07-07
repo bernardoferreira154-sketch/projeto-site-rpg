@@ -6,20 +6,20 @@
            ===================== */
       
         /* Fundos */
-        --bg-principal: #E3D5BE;
-        --bg-secundario: #D4C1A2;
+        --bg-principal: #e0ba48;
+        --bg-secundario: #eedf8c    ;
         --bg-card: #F1E6D2;
       
         /* Textos */
         --texto-principal: #33261B;
-        --texto-secundario: #6B5742;
+        --texto-secundario: #ca9522;
       
         /* Destaques */
         --destaque: #9B5E2E;
         --destaque-hover: #7E4722;
       
         /* Botões */
-        --btn-bg: #A66A35;
+        --btn-bg: #dead26;
         --btn-texto: #FFF4DE;
       
         /* Bordas */
@@ -101,7 +101,7 @@ h1{
 }
 
 h2{
-    color: var(--texto-destaque)
+    color: var(--texto-secundario)
 }
 
 .container{
@@ -115,6 +115,7 @@ h2{
     width: 90vh;
     height: 50vh;
     margin-top: 50px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
 
 }
 
@@ -128,9 +129,18 @@ h2{
 }
 
 .mestre, .jogador{
+    transition: 0.3s;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
     border-radius: 15px;
     border: none;
     height: 50px;
     width: 200px;
     background-color: var(--btn-bg);
+
+}
+
+.mestre:hover, .jogador:hover{
+    transition: 0.3s;
+    transform:  translateY(-3px)
+
 }
