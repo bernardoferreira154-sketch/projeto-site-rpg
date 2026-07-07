@@ -1,0 +1,136 @@
+:root {
+
+
+        /* =====================
+           TEMA - Grimório Moderno
+           ===================== */
+      
+        /* Fundos */
+        --bg-principal: #E3D5BE;
+        --bg-secundario: #D4C1A2;
+        --bg-card: #F1E6D2;
+      
+        /* Textos */
+        --texto-principal: #33261B;
+        --texto-secundario: #6B5742;
+      
+        /* Destaques */
+        --destaque: #9B5E2E;
+        --destaque-hover: #7E4722;
+      
+        /* Botões */
+        --btn-bg: #A66A35;
+        --btn-texto: #FFF4DE;
+      
+        /* Bordas */
+        --borda: #BCA581;
+      
+        /* Elementos especiais */
+        --ouro: #C49A4A;
+        --tinta: #292016;
+      
+      
+
+    /* =====================
+     SKIN FOGO
+     ===================== */
+
+  --fogo-bg-principal: #5A2518;
+  --fogo-bg-leitor: #7A3B24;
+
+  --fogo-texto-principal: #F5D7B0;
+  --fogo-texto-destaque: #D96B27;
+
+  --fogo-btn-bg: #A6401B;
+
+
+  /* =====================
+     SKIN GELO
+     ===================== */
+
+  --gelo-bg-principal: #B8D5D8;
+  --gelo-bg-leitor: #DDEFF0;
+
+  --gelo-texto-principal: #263238;
+  --gelo-texto-destaque: #4FA3C1;
+
+  --gelo-btn-bg: #397C91;
+
+
+  /* =====================
+     SKIN NATUREZA
+     ===================== */
+
+  --natureza-bg-principal: #9EAA7A;
+  --natureza-bg-leitor: #D8D7A8;
+
+  --natureza-texto-principal: #35421F;
+  --natureza-texto-destaque: #8B8A35;
+
+  --natureza-btn-bg: #68702A;
+
+
+  /* =====================
+     SKIN SOMBRA
+     ===================== */
+
+  --sombra-bg-principal: #211B19;
+  --sombra-bg-leitor: #352A26;
+
+  --sombra-texto-principal: #E8DCC7;
+  --sombra-texto-destaque: #C79A4A;
+
+  --sombra-btn-bg: #70452B;
+
+
+}
+
+
+body{
+    background-color: var(--bg-principal);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    color: var(--texto-principal);
+    margin-top: 50px;
+}
+
+h2{
+    color: var(--texto-destaque)
+}
+
+.container{
+    background-color: var(--bg-secundario);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90vh;
+    height: 50vh;
+    margin-top: 50px;
+
+}
+
+.botoes{
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.mestre, .jogador{
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    background-color: var(--btn-bg);
+}
