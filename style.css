@@ -1,11 +1,11 @@
 :root {
-  /* BASE CLAUDE DARK */
+  /* BASE */
   --background: #1A1A1A;
   --surface: #242424;
   --surface-hover: #2D2D2D;
   --border: #3A3A3A;
 
-  /* TEXTOS DO POCKET DM */
+  /* TEXTOS*/
   --text-title: #F5F1E8;      /* títulos grandes */
   --text-primary: #D9D6CF;    /* textos principais */
   --text-secondary: #A6A4A0;  /* descrições */
