@@ -114,6 +114,16 @@ body{
     flex-direction: column;
 }
 
+.reveal{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .txtlogo{
     font-family: 'cinzel', serif;
@@ -321,7 +331,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 400px;
+    margin-top: 460px;
 }
 
 
@@ -355,10 +365,29 @@ body{
     width: 600px;
 }
 
+.bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    margin-left: 50px;
+    width: 1200px;
+    justify-content: space-around;
+}
 
+.imgsec2,
+.img2sec2{
+    width: 350px;
+    height: auto;
+}
 
+.hrsec2{
+    width: 1px;
+    height: 400px;
 
-
+    background-color: var(--gold-primary);
+    border: none;
+}
 
 
 
@@ -370,7 +399,7 @@ body{
     gap: 30px;
 }
 
-.lineh{
+.linev{
     width: 1px;
     height: 700px;
     border: 1px solid var(--border);
