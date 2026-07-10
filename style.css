@@ -114,6 +114,7 @@ body{
     flex-direction: column;
 }
 
+
 .txtlogo{
     font-family: 'cinzel', serif;
     font-size: 19px;
@@ -172,6 +173,8 @@ body{
 }
 
 .navbar{
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -187,6 +190,7 @@ body{
     margin-top: 30px;
     border: 2px solid var(--border);
     background: rgba(36, 36, 36, 0.9);
+    z-index: 10;
 }
 
 #img{
@@ -313,3 +317,63 @@ body{
     position: absolute;
 }
 
+.sec2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 400px;
+}
+
+
+.top{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    width: 1200px;
+    height: auto;
+}
+
+.h1sec2, .psec2{
+    margin: 0px;
+}
+
+.h1sec2{
+    font-size: 50px;
+    font-family: 'inter', sans-serif;
+    flex: 1;
+    color: var(--text-title);
+}
+
+.psec2{
+    flex: 1;
+    font-size: 15px;
+    font-family: 'inter', sans-serif;
+    color: var(--text-title);
+    width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+.sec3{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.lineh{
+    width: 1px;
+    height: 700px;
+    border: 1px solid var(--border);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
