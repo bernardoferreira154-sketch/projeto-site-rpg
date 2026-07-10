@@ -3,7 +3,7 @@
 
 :root {
   /* BASE */
-  --background: #1A1A1A;
+  --background: #0c0c0c;
   --surface: #242424;
   --surface-hover: #2D2D2D;
   --border: #3A3A3A;
@@ -114,24 +114,67 @@ body{
     flex-direction: column;
 }
 
-p{
+.txtlogo{
     font-family: 'cinzel', serif;
-    font-size: 21px;
+    font-size: 19px;
     color: var(--gold-primary)
 }
 
-h1{
+/*keyframe do txt principal */
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.h1l{
+    font-size: 50px;
     font-family: 'inter', sans-serif;
     color: var(--text-title);
     margin-top: 50px;
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    animation: textAppear 2s ease forwards;
+    animation-delay: 0.5s;
 }
 
-h2{
+/*keyframe do txt secundario */
+@keyframes textAppear2 {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.h2l{
+    font-size: 20px;
     font-family: 'inter', sans-serif;
-    color: var(--text-title)
+    color: var(--text-title);
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    animation: textAppear2 1s ease forwards;
+    animation-delay: 1.2s;
 }
 
-.container{
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
     background-color: var(--background);
     display: flex;
     justify-content: space-between;
@@ -139,17 +182,39 @@ h2{
     flex-direction: row;
     border-radius: 20px;
     padding: 10px 30px;
-    width: 180vh;
-    height: 7vh;
-    margin-top: 5vh;
+    width: 1600px;
+    height: 50px;
+    margin-top: 30px;
     border: 2px solid var(--border);
     background: rgba(36, 36, 36, 0.9);
+}
+
+#img{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.links{
+    font-size: 16px;
+    display: flex;
+    flex: 1;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a{
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: 0.3s;
 }
 
 .logo{
     align-items: center;
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
 .botoes{
@@ -160,6 +225,8 @@ h2{
     gap: 20px;
     position: relative;
     z-index: 2;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .sign_up{
@@ -171,8 +238,8 @@ h2{
     transition: 0.3s;
     border-radius: 10px;
     border: none;
-    height: 6vh;
-    width: 20vh;
+    height: 40px;
+    width: 130px;
 }
 
 .log_in{
@@ -183,16 +250,66 @@ h2{
 
 .imglogo{
 
-    width: 13vh;
+    width: 70px;
     height: auto;
 
 }
 
 
 .textprinc{
+    justify-content: center;
     gap: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 370px;
+    align-self: center;
+}
+
+
+/* kayframe da imagem principal */
+@keyframes runeAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.3;
+    }
+}
+
+.imgprinc{
+    
+    opacity: 0;
+
+    animation: runeAppear 3s ease forwards;
+
+    mask-image: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.4) 15%,
+        rgba(0,0,0,0.3) 25%,
+        rgba(0,0,0,0.2) 40%,
+        rgba(0,0,0,0.1) 45%,
+        rgba(0,0,0,0) 75%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.4) 15%,
+        rgba(0,0,0,0.3) 25%,
+        rgba(0,0,0,0.2) 40%,
+        rgba(0,0,0,0.1) 45%,
+        rgba(0,0,0,0) 75%,
+        transparent 100%
+    );
+
+    width: 60%;
+    height: auto;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: absolute;
 }
 
