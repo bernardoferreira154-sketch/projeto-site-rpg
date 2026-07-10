@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
   /* BASE */
   --background: #1A1A1A;
@@ -30,29 +33,29 @@
      ===================== */
 
         /* FUNDOS */
-        --background: #F8F6F2;      /* Fundo principal */
-        --surface: #FFFFFF;         /* Cards */
-        --surface-hover: #F2F0EB;   /* Hover */
-        --border: #DDD8CF;          /* Bordas */
+        --background-wt: #F8F6F2;      /* Fundo principal */
+        --surface-wt: #FFFFFF;         /* Cards */
+        --surface--hover-wt: #F2F0EB;   /* Hover */
+        --border-wt: #DDD8CF;          /* Bordas */
       
         /* TEXTOS */
-        --text-title: #1F1E1B;      /* Títulos */
-        --text-primary: #36342F;    /* Texto comum */
-        --text-secondary: #6A675F;  /* Texto secundário */
-        --text-muted: #979288;      /* Texto apagado */
+        --text-title-wt: #1F1E1B;      /* Títulos */
+        --text-primary-wt: #36342F;    /* Texto comum */
+        --text-secondary-wt: #6A675F;  /* Texto secundário */
+        --text-muted-wt: #979288;      /* Texto apagado */
       
         /* DOURADO */
-        --gold-primary: #C89B3C;
-        --gold-hover: #D8AC47;
-        --gold-dark: #A97C24;
+        --gold-primary-wt: #C89B3C;
+        --gold-hover-wt: #D8AC47;
+        --gold-dark-wt: #A97C24;
       
         /* BOTÕES */
-        --button-primary: #C89B3C;
-        --button-primary-text: #FFFFFF;
+        --button-primary-wt: #C89B3C;
+        --button-primary-text-wt: #FFFFFF;
       
-        --button-secondary-bg: transparent;
-        --button-secondary-border: #C89B3C;
-        --button-secondary-text: #A97C24;
+        --button-secondary-bg-wt: transparent;
+        --button-secondary-border-wt: #C89B3C;
+        --button-secondary-text-wt: #A97C24;
       
         /* FEEDBACK */
         --success: #4F8A63;
@@ -111,52 +114,85 @@ body{
     flex-direction: column;
 }
 
+p{
+    font-family: 'cinzel', serif;
+    font-size: 21px;
+    color: var(--gold-primary)
+}
+
 h1{
+    font-family: 'inter', sans-serif;
     color: var(--text-title);
     margin-top: 50px;
 }
 
 h2{
-    color: var(--text-primary)
+    font-family: 'inter', sans-serif;
+    color: var(--text-title)
 }
 
 .container{
-    background: var(--surface);
+    background-color: var(--background);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 20px;
-    padding: 30px;
-    width: 90vh;
-    height: 50vh;
-    margin-top: 50px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    padding: 10px 30px;
+    width: 180vh;
+    height: 7vh;
+    margin-top: 5vh;
+    border: 2px solid var(--border);
+    background: rgba(36, 36, 36, 0.9);
+}
 
+.logo{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .botoes{
-    margin-top: 20px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
     gap: 20px;
+    position: relative;
+    z-index: 2;
 }
 
-.mestre, .jogador{
+.sign_up{
+    box-shadow: 5px 5px 20px rgba(221, 221, 221, 0.2);
+    background-color: var(--button-primary-text-wt);
+}
+
+.sign_up, .log_in{
     transition: 0.3s;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
-    height: 50px;
-    width: 200px;
-    background-color: var(--btn-bg);
+    height: 6vh;
+    width: 20vh;
+}
+
+.log_in{
+    color: var(--button-primary-text-wt);
+    background: transparent;
+    border: 2px solid var(--border)
+}
+
+.imglogo{
+
+    width: 13vh;
+    height: auto;
 
 }
 
-.mestre:hover, .jogador:hover{
-    transition: 0.3s;
-    transform:  translateY(-3px)
 
+.textprinc{
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
