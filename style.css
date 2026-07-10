@@ -26,17 +26,39 @@
   --button-secondary-text: #D4A72C;
 
     /* =====================
-     SKIN FOGO
+        SKIN BRANCA
      ===================== */
 
-  --fogo-bg-principal: #5A2518;
-  --fogo-bg-leitor: #7A3B24;
-
-  --fogo-texto-principal: #F5D7B0;
-  --fogo-texto-destaque: #D96B27;
-
-  --fogo-btn-bg: #A6401B;
-
+        /* FUNDOS */
+        --background: #F8F6F2;      /* Fundo principal */
+        --surface: #FFFFFF;         /* Cards */
+        --surface-hover: #F2F0EB;   /* Hover */
+        --border: #DDD8CF;          /* Bordas */
+      
+        /* TEXTOS */
+        --text-title: #1F1E1B;      /* Títulos */
+        --text-primary: #36342F;    /* Texto comum */
+        --text-secondary: #6A675F;  /* Texto secundário */
+        --text-muted: #979288;      /* Texto apagado */
+      
+        /* DOURADO */
+        --gold-primary: #C89B3C;
+        --gold-hover: #D8AC47;
+        --gold-dark: #A97C24;
+      
+        /* BOTÕES */
+        --button-primary: #C89B3C;
+        --button-primary-text: #FFFFFF;
+      
+        --button-secondary-bg: transparent;
+        --button-secondary-border: #C89B3C;
+        --button-secondary-text: #A97C24;
+      
+        /* FEEDBACK */
+        --success: #4F8A63;
+        --warning: #D49B2A;
+        --error: #C95B5B;
+      
 
   /* =====================
      SKIN GELO
@@ -81,7 +103,7 @@
 
 
 body{
-    background-color: var(--bg-principal);
+    background-color: var(--background);
     margin: 0;
     display: flex;
     align-items: center;
@@ -90,16 +112,16 @@ body{
 }
 
 h1{
-    color: var(--texto-principal);
+    color: var(--text-title);
     margin-top: 50px;
 }
 
 h2{
-    color: var(--texto-secundario)
+    color: var(--text-primary)
 }
 
 .container{
-    background-color: var(--bg-secundario);
+    background: var(--surface);
     display: flex;
     justify-content: space-around;
     align-items: center;
