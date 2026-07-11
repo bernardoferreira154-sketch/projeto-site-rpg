@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+::view-transition-old(root) {
+  animation: slide-out 0.5s ease-in-out both;
+}
+
+::view-transition-new(root) {
+  animation: slide-in 0.5s ease-in-out both;
+}
+
+
 :root {
   /* BASE */
   --background: #0c0c0c;
@@ -87,23 +121,34 @@
   --natureza-texto-destaque: #8B8A35;
 
   --natureza-btn-bg: #68702A;
-
-
-  /* =====================
-     SKIN SOMBRA
-     ===================== */
-
-  --sombra-bg-principal: #211B19;
-  --sombra-bg-leitor: #352A26;
-
-  --sombra-texto-principal: #E8DCC7;
-  --sombra-texto-destaque: #C79A4A;
-
-  --sombra-btn-bg: #70452B;
-
-
 }
 
+
+.sknwt{
+    --background: #F8F6F2;      /* Fundo principal */
+        --surface: #FFFFFF;         /* Cards */
+        --surface--hover: #F2F0EB;   /* Hover */
+        --border: #DDD8CF;          /* Bordas */
+      
+        /* TEXTOS */
+        --text-title: #1F1E1B;      /* Títulos */
+        --text-primary: #36342F;    /* Texto comum */
+        --text-secondary: #6A675F;  /* Texto secundário */
+        --text-muted: #979288;      /* Texto apagado */
+      
+        /* DOURADO */
+        --gold-primary: #C89B3C;
+        --gold-hover: #D8AC47;
+        --gold-dark: #A97C24;
+      
+        /* BOTÕES */
+        --button-primary: #C89B3C;
+        --button-primary-text: #FFFFFF;
+      
+        --button-secondary-bg: transparent;
+        --button-secondary-border: #C89B3C;
+        --button-secondary-text: #A97C24;
+}
 
 body{
     background-color: var(--background);
@@ -243,23 +288,33 @@ body{
     justify-content: flex-end;
 }
 
-.sign_up{
-    box-shadow: 5px 5px 20px rgba(221, 221, 221, 0.2);
-    background-color: var(--button-primary-text-wt);
-}
-
 .sign_up, .log_in{
+    font-family: 'inter', sans-serif;
     transition: 0.3s;
     border-radius: 10px;
     border: none;
     height: 40px;
     width: 130px;
+
+    /* necessário pro <a> se comportar como botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.sign_up{
+    box-shadow: 5px 5px 20px rgba(221, 221, 221, 0.2);
+    background-color: var(--button-primary-text-wt);
+    color: var(--background); /* cor do texto do sign up, ajusta se quiser outra */
 }
 
 .log_in{
     color: var(--button-primary-text-wt);
     background: transparent;
-    border: 2px solid var(--border)
+    border: 2px solid var(--border);
 }
 
 .imglogo{
@@ -406,3 +461,10 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.link-active{
+    font-size: 100px;
+}
+
+
+
