@@ -18,5 +18,20 @@ elements.forEach((element) => {
 
 
 document.querySelector(".sign_up").addEventListener("click", () => {
-    document.querySelector(".landingpage").classList.add("hidden")
+    document.querySelector(".landingpage").classList.add("hidden");
+    document.querySelector(".signup").classList.remove("hidden");
 });
+
+
+const inputEmail = document.querySelector(".e-mail");
+const inputPassword = document.querySelector(".pswrd");
+const btnGoogle = document.querySelector(".SignUpWGoogle");
+
+const addClassBtnGoogle = () => { document.querySelector(".SignUpWGoogle").classList.add("sobreselecionado");}
+const removeClassBtnGoogle = () => { document.querySelector(".SignUpWGoogle").classList.remove("sobreselecionado");}
+
+inputEmail.addEventListener('focus', addClassBtnGoogle);
+inputEmail.addEventListener('blur', removeClassBtnGoogle);
+
+inputPassword.addEventListener('focus', addClassBtnGoogle);
+inputPassword.addEventListener('blur', removeClassBtnGoogle);
