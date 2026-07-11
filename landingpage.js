@@ -13,10 +13,10 @@ elements.forEach((element) => {
 })
 
 
-window.addEventListener("pagereveal", (event) => {
-    if (event.viewTransition) {
-        console.log("✅ Transição aconteceu");
-    } else {
-        console.log("❌ Sem transição dessa vez");
-    }
+
+
+
+
+document.querySelector(".sign_up").addEventListener("click", () => {
+    document.querySelector(".landingpage").classList.add("hidden")
 });
