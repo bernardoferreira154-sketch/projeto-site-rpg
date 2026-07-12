@@ -1,6 +1,6 @@
-
 html{
-    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 @view-transition {
@@ -153,6 +153,10 @@ html{
         --button-secondary-text: #A97C24;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     background: var(--bg-degrade);
     margin: 0;
@@ -160,6 +164,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-height: 100%;
 }
 
 .landingpage{
@@ -192,7 +197,8 @@ body{
 .txtlogo{
     font-family: 'cinzel', serif;
     font-size: 19px;
-    color: var(--gold-primary)
+    color: var(--gold-primary);
+    white-space: nowrap;
 }
 
 /*keyframe do txt principal */
@@ -209,10 +215,12 @@ body{
 }
 
 .h1l{
-    font-size: 50px;
+    font-size: clamp(28px, 5vw, 50px);
     font-family: 'inter', sans-serif;
     color: var(--text-title);
     margin-top: 50px;
+    text-align: center;
+    padding: 0 20px;
 
     opacity: 0;
     transform: translateY(40px);
@@ -235,9 +243,11 @@ body{
 }
 
 .h2l{
-    font-size: 20px;
+    font-size: clamp(14px, 2.2vw, 20px);
     font-family: 'inter', sans-serif;
     color: var(--text-title);
+    text-align: center;
+    padding: 0 20px;
 
     opacity: 0;
     transform: translateY(30px);
@@ -259,18 +269,16 @@ body{
     flex-direction: row;
     border-radius: 20px;
     padding: 10px 30px;
-    width: 1600px;
-    height: 50px;
+    width: 92%;
+    max-width: 1600px;
+    height: 60px;
     margin-top: 30px;
     border: 2px solid var(--border);
     background: rgba(36, 36, 36, 0.9);
     z-index: 10;
 }
 
-.img{
-    user-select: none;
-    -webkit-user-drag: none;
-}
+
 
 .links{
     font-size: 16px;
@@ -286,6 +294,7 @@ body{
     text-decoration: none;
     color: var(--text-muted);
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .logo{
@@ -293,6 +302,7 @@ body{
     display: flex;
     flex-direction: row;
     flex: 1;
+    min-width: fit-content;
 }
 
 .botoes{
@@ -315,19 +325,17 @@ body{
     height: 40px;
     width: 130px;
 
-    /* necessário pro <a> se comportar como botão */
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     cursor: pointer;
-    box-sizing: border-box;
 }
 
 .sign_up{
     box-shadow: 5px 5px 20px rgba(221, 221, 221, 0.2);
     background-color: var(--button-primary-text-wt);
-    color: var(--background); /* cor do texto do sign up, ajusta se quiser outra */
+    color: var(--background);
 }
 
 .log_in{
@@ -337,10 +345,8 @@ body{
 }
 
 .imglogo{
-
     width: 70px;
     height: auto;
-
 }
 
 
@@ -350,8 +356,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 370px;
+    margin-top: clamp(140px, 34vh, 370px);
     align-self: center;
+    width: 100%;
+    padding: 0 20px;
 }
 
 
@@ -405,18 +413,20 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 460px;
+    margin-top: clamp(140px, 40vh, 460px);
+    width: 100%;
+    align-items: center;
 }
 
 
 .top{
-    margin-left: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     height: auto;
 }
 
@@ -425,7 +435,7 @@ body{
 }
 
 .h1sec2{
-    font-size: 50px;
+    font-size: clamp(30px, 5vw, 50px);
     font-family: 'inter', sans-serif;
     flex: 1;
     color: var(--text-title);
@@ -436,7 +446,8 @@ body{
     font-size: 15px;
     font-family: 'inter', sans-serif;
     color: var(--text-title);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .bottom{
@@ -444,23 +455,26 @@ body{
     flex-direction: row;
     align-items: center;
     gap: 60px;
-    margin-left: 50px;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     justify-content: space-around;
 }
 
 .imgsec2,
 .img2sec2{
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
 }
 
 .hrsec2{
     width: 1px;
     height: 400px;
+    max-height: 40vh;
 
     background-color: var(--gold-primary);
     border: none;
+    flex-shrink: 0;
 }
 
 
@@ -492,8 +506,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 20px;
     background: transparent;
 }
 
@@ -502,27 +518,33 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    text-align: center;
 }
 
 .imglogosu{
     width: 170px;
+    max-width: 60vw;
     height: auto;
 }
 
 .h1su{
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
     font-family: 'inter', sans-serif;
     color: var(--text-title);
+    padding: 0 10px;
 }
 
 .SignUpWGoogle{
     margin-top: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 44px;
     border: none;
     background-color: var(--background-wt);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .or{
@@ -537,6 +559,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .google-icon-color{
@@ -545,7 +569,8 @@ body{
 
 .pswrd, .e-mail{
     height: 40px;
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     border-radius: 10px;
     border: 1px solid var(--border);
     background-color: var(--background);
@@ -574,6 +599,156 @@ body{
 .sobreselecionado{
     opacity: 0.7;
     transition: 0.5s;
+}
+
+
+
+
+/* =====================================================
+   RESPONSIVO
+   ===================================================== */
+
+/* Tablets grandes / notebooks pequenos */
+@media (max-width: 1100px) {
+    .top, .bottom{
+        width: 92%;
+    }
+
+    .top{
+        gap: 60px;
+    }
+}
+
+/* Tablets: empilha as colunas da seção "Archivum" */
+@media (max-width: 900px) {
+    .top{
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .psec2{
+        max-width: 500px;
+    }
+
+    .bottom{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hrsec2{
+        width: 60%;
+        max-width: 300px;
+        height: 1px;
+    }
+
+    .imgsec2, .img2sec2{
+        max-width: 280px;
+    }
+
+    .textprinc{
+        margin-top: clamp(120px, 28vh, 260px);
+    }
+
+    .sec2{
+        margin-top: clamp(100px, 22vh, 260px);
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 640px) {
+    .navbar{
+        padding: 8px 16px;
+        height: auto;
+        min-height: 50px;
+        border-radius: 16px;
+        gap: 10px;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .logo{
+        flex: none;
+    }
+
+    .botoes{
+        flex: none;
+        margin-left: auto;
+        gap: 10px;
+    }
+
+    .imglogo{
+        width: 46px;
+    }
+
+    .txtlogo{
+        font-size: 15px;
+    }
+
+    .sign_up, .log_in{
+        width: auto;
+        min-width: 84px;
+        height: 36px;
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+    .landingpage{
+        width: 90%;
+    }
+
+    .h1l{
+        margin-top: 30px;
+    }
+
+    .h1sec2{
+        text-align: center;
+    }
+
+    .psec2{
+        text-align: center;
+    }
+
+    .imgsec2, .img2sec2{
+        max-width: 220px;
+    }
+
+    .signup{
+        padding: 30px 20px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px) {
+    .imglogo{
+        width: 38px;
+    }
+
+    .txtlogo{
+        font-size: 13px;
+    }
+
+    .sign_up, .log_in{
+        min-width: 74px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .textprinc{
+        margin-top: clamp(110px, 26vh, 200px);
+    }
+
+    .sec2{
+        margin-top: clamp(90px, 20vh, 200px);
+    }
+}
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+    max-width: 100%;
 }
 
 .hidden{
