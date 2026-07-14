@@ -3,9 +3,9 @@ html{
     overflow-x: hidden;
 }
 
-@view-transition {
-  navigation: auto;
-}
+/*@view-transition {
+    navigation: auto;
+  }*/
 
 @keyframes slide-in {
   from {
@@ -460,10 +460,9 @@ body{
     justify-content: space-around;
 }
 
-.imgsec2,
-.img2sec2{
+.imgsec2{
     width: 100%;
-    max-width: 350px;
+    max-width: 1650px;
     height: auto;
 }
 
