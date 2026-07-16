@@ -13,15 +13,29 @@ elements.forEach((element) => {
 })
 
 
+document.querySelector(".logo").addEventListener("click", () => {
+    document.querySelectorAll(".hidden").forEach(e => {
+        e.classList.remove("hidden");
+    });
+    document.querySelectorAll(".login, .signup").forEach(e => {
+        e.classList.add("hidden")
+    })
 
+});
 
 
 
 document.querySelector(".sign_up").addEventListener("click", () => {
-    document.querySelector(".landingpage").classList.add("hidden");
+    document.querySelector(".landingpage")?.classList.add("hidden");
+    document.querySelector(".login")?.classList.add("hidden");
     document.querySelector(".signup").classList.remove("hidden");
 });
 
+document.querySelector(".log_in").addEventListener("click", () => {
+    document.querySelector(".landingpage")?.classList.add("hidden");
+    document.querySelector(".signup")?.classList.add("hidden");
+    document.querySelector(".login").classList.remove("hidden");
+});
 
 const inputEmail = document.querySelector(".e-mail");
 const inputPassword = document.querySelector(".pswrd");

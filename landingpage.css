@@ -183,6 +183,7 @@ body{
   transform: translateY(20px);
 }
 
+
 .reveal{
     opacity: 0;
     transform: translateY(50px);
@@ -303,6 +304,7 @@ body{
     flex-direction: row;
     flex: 1;
     min-width: fit-content;
+    cursor: pointer;
 }
 
 .botoes{
@@ -464,7 +466,44 @@ body{
     width: 100%;
     max-width: 1650px;
     height: auto;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+
+
 }
+
+.buttonMKP{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.lbry, .prjt, .prjts{
+    position: relative;
+    z-index: 3;
+
+}
+
+.mockup{
+    padding: 30px;
+        position: relative;
+        z-index: 1;
+        background: radial-gradient(
+    80% 80% at 50% 50%,
+    #000000 0%,
+    #111111 50%,
+    #1B1B1B 75%,
+    #1A1A1A 100%
+);
+        width: fit-content;
+        height: 750px;
+        
+        
+}
+
+
 
 .hrsec2{
     width: 1px;
@@ -498,7 +537,7 @@ body{
     font-size: 100px;
 }
 
-
+/* signup */
 
 .signup{
     display: flex;
@@ -595,10 +634,96 @@ body{
     border: 1px solid var(--border-hover)
 }
 
-.sobreselecionado{
-    opacity: 0.7;
-    transition: 0.5s;
+
+
+/* login*/
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 20px;
+    background: transparent;
 }
+
+.Containerlogin{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.imglogoli{
+    width: 170px;
+    max-width: 60vw;
+    height: auto;
+}
+
+.h1li{
+    font-size: clamp(18px, 3vw, 22px);
+    font-family: 'inter', sans-serif;
+    color: var(--text-title);
+    padding: 0 10px;
+}
+
+.LogInWGoogle{
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: 44px;
+    border: none;
+    background-color: var(--background-wt);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.or{
+    opacity: 0.5;
+    color: var(--text-muted);
+    font-family: 'inter', sans-serif;
+}
+
+.create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -752,4 +877,9 @@ img{
 
 .hidden{
     display: none;
+}
+
+.sobreselecionado{
+    opacity: 0.7;
+    transition: 0.5s;
 }
