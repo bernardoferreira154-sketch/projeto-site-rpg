@@ -41,6 +41,7 @@ html{
   --background: #0c0c0c;
   --bg-degrade: linear-gradient(180deg, #040404 0%, #0d0d0d 100%);
   --surface: #242424;
+  --surface-transparent:rgba(15, 15, 15, 0.9);
   --surface-hover: #2D2D2D;
   --border: #202020e5;
   --border-hover: #585858;
@@ -470,7 +471,7 @@ body{
     z-index: 2;
     display: block;
     margin: 0 auto;
-
+    mask-image: (white, transparent);
 
 }
 
@@ -478,27 +479,31 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 20px;
 }
 
 .lbry, .prjt, .prjts{
     position: relative;
     z-index: 3;
 
+
 }
 
 .mockup{
-    padding: 30px;
+    padding: 40px;
         position: relative;
         z-index: 1;
-        background: radial-gradient(
-    80% 80% at 50% 50%,
-    #000000 0%,
-    #111111 50%,
-    #1B1B1B 75%,
-    #1A1A1A 100%
-);
+        background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%,
+         rgba(18, 18, 18, 1) 30%,
+          rgba(27, 27, 27, 1) 51%,
+           rgb(31, 31, 31) 76%,
+            rgb(48, 48, 48) 100%);
         width: fit-content;
-        height: 750px;
+        height: 610px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        border-radius: 5%;
         
         
 }
@@ -701,8 +706,82 @@ body{
 }
 
 
+/* footer */
+.entire_footer{
+    margin-top: 300px;
+    position: relative;
+    width: 100vw;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--surface-transparent);
+    padding: 40px;
+    gap: 30px;
+    width: 100vw;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+    justify-content: center;
+}
 
 
+.entire_footer img{
+    position: absolute;
+    width: 60vw;
+    height: auto;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.4) 15%,
+        rgba(0,0,0,0.3) 25%,
+        rgba(0,0,0,0.2) 40%,
+        rgba(0,0,0,0.1) 45%,
+        rgba(0,0,0,0) 75%,
+        transparent 100%
+    );
+
+    -webkit-mask-image: radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.4) 15%,
+        rgba(0,0,0,0.3) 25%,
+        rgba(0,0,0,0.2) 40%,
+        rgba(0,0,0,0.1) 45%,
+        rgba(0,0,0,0) 75%,
+        transparent 100%
+    );
+
+
+}
+
+.community, .core_features, .social_media, .legal{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer h3{
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+    font-family: 'inter';
+}
+
+.footer a{
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: 0.3s;
+    white-space: nowrap;
+}
 
 
 
@@ -777,6 +856,28 @@ body{
     .sec2{
         margin-top: clamp(100px, 22vh, 260px);
     }
+
+    .mockup{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
+
+    .imgsec2{
+        width: 100%;
+        height: auto;
+    }
+
+    .buttonMKP{
+        width: 90%;
+        gap: 12px;
+    }
+
+    .buttonMKP button{
+        height: 42px;
+        font-size: .9rem;
+    }
+    
 }
 
 /* Celulares grandes */
@@ -842,6 +943,35 @@ body{
     .signup{
         padding: 30px 20px;
     }
+
+    .bottom{
+        display:flex;
+        justify-content:center;
+    }
+
+    .mockup{
+        width:95%;
+        border-radius:18px;
+    }
+
+    .imgsec2{
+        width:100%;
+        display:block;
+    }
+
+    .buttonMKP{
+        width:92%;
+        bottom:20px;
+        gap:10px;
+    }
+
+    .buttonMKP button{
+        height:40px;
+        font-size:.85rem;
+    }
+
+
+
 }
 
 /* Celulares pequenos */
@@ -866,6 +996,21 @@ body{
 
     .sec2{
         margin-top: clamp(90px, 20vh, 200px);
+    }
+
+    .mockup{
+        width:100%;
+    }
+
+    .buttonMKP{
+        flex-direction:column;
+        width:85%;
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    .buttonMKP button{
+        width:100%;
     }
 }
 
