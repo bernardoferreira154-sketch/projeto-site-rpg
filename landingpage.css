@@ -45,6 +45,7 @@ html{
   --surface-hover: #2D2D2D;
   --border: #202020e5;
   --border-hover: #585858;
+  --border-hover-transparent: #58585875;
 
   /* TEXTOS*/
   --text-title: #F5F1E8;      /* títulos grandes */
@@ -275,7 +276,7 @@ body{
     max-width: 1600px;
     height: 60px;
     margin-top: 30px;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border-hover-transparent);
     background: rgba(36, 36, 36, 0.9);
     z-index: 10;
 }
@@ -485,9 +486,24 @@ body{
 .lbry, .prjt, .prjts{
     position: relative;
     z-index: 3;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 20%;
+    border: 1px solid var(--border-hover-transparent);
+    backdrop-filter: blur(20px);
+    background-color: var(--surface);
 
-
+    background: 
+    linear-gradient(
+        145deg,
+        transparent 35%,
+        rgba(255,255,255,.04) 75%,
+        rgba(255,255,255,.08) 100%
+    ),
+    #242424;
 }
+
+
 
 .mockup{
     padding: 40px;
@@ -498,13 +514,11 @@ body{
           rgba(27, 27, 27, 1) 51%,
            rgb(31, 31, 31) 76%,
             rgb(48, 48, 48) 100%);
-        width: fit-content;
-        height: 610px;
         display: flex;
         flex-direction: column;
-        gap: 60px;
+        gap: 50px;
         border-radius: 5%;
-        
+        border: 1px solid var(--border-hover-transparent)
         
 }
 
